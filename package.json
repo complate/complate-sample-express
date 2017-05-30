@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start": "node src",
+    "test": "eslint --cache --ext .js --ext .jsx *.js src views && echo ✓",
+    "watch": "wrollup --config",
+    "compile": "rollup --config"
+  },
+  "babel": {
+    "presets": [
+      "es2015-rollup"
+    ],
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "createElement"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "complate-jsx": "^0.6.0",
+    "complate-stream": "^0.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-fnd": "^1.1.1",
+    "rollup": "^0.41.6",
+    "wrollup": "^0.3.1"
+  }
+}
