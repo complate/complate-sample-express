@@ -1,3 +1,5 @@
+import "./panel";
+import "./list";
 import "./layout";
 import renderer, { registerMacro, createElement } from "complate-stream";
 
@@ -10,6 +12,18 @@ registerMacro("site-index", ({ title }) => {
 	return <default-layout title={title} stylesheets={STYLESHEETS}
 			body-class="container-fluid">
 		<h1>{title}</h1>
+
+		<content-panel title="Welcome">
+			<p>lorem ipsum</p>
+
+			<list-group>
+				<span>foo</span>
+				<strong>bar</strong>
+				<span>baz</span>
+			</list-group>
+
+			<p>dolor sit amet</p>
+		</content-panel>
 	</default-layout>;
 });
 
