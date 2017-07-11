@@ -18,7 +18,7 @@ registerMacro("style-sheets", ({ items }) => {
 	}
 
 	return items.map(({ uri, hash }) => {
-		return <link rel="stylesheet" href={uri}
+		return <link rel="stylesheet" href={uri} // eslint-disable-next-line indent
 				integrity={hash} crossorigin="anonymous" />;
 	});
 });

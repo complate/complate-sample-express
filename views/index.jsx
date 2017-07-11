@@ -9,8 +9,8 @@ const STYLESHEETS = [{
 }];
 
 registerMacro("site-index", ({ title }) => {
-	return <default-layout title={title} stylesheets={STYLESHEETS}
-			body-class="container-fluid">
+	return <default-layout title={title} // eslint-disable-next-line indent
+			stylesheets={STYLESHEETS} body-class="container-fluid">
 		<h1>{title}</h1>
 
 		<content-panel title="Welcome">
