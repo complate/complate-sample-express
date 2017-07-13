@@ -1,19 +1,19 @@
 {
-  "scripts": {
-    "start": "npm-run-all --parallel server-watch compile-watch",
-    "test": "eslint --cache --ext .js --ext .jsx *.js src views && echo ✓",
-    "server-watch": "nodemon -w src -w dist/bundle.js -x 'npm run server'",
-    "server": "node src",
-    "compile-watch": "npm run compile -- --watch",
-    "compile": "faucet --no-fingerprint --compact"
-  },
-  "dependencies": {
-    "express": "^4.15.3"
-  },
-  "devDependencies": {
-    "complate-jsx": "^0.7.1",
-    "complate-stream": "^0.9.6",
-    "nodemon": "^1.11.0",
-    "npm-run-all": "^4.0.2"
-  }
+	"scripts": {
+		"start": "npm-run-all --parallel server-watch compile-watch",
+		"test": "eslint --cache --ext .js --ext .jsx *.js src views && echo ✓",
+		"server-watch": "nodemon -w src -w dist/bundle.js -x 'npm run server'",
+		"server": "node src",
+		"compile-watch": "npm run compile -- --watch",
+		"compile": "faucet --no-fingerprint --compact"
+	},
+	"dependencies": {
+		"express": "^4.15.3"
+	},
+	"devDependencies": {
+		"complate-jsx": "^0.7.1",
+		"complate-stream": "^0.9.6",
+		"nodemon": "^1.11.0",
+		"npm-run-all": "^4.0.2"
+	}
 }
