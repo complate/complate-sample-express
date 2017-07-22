@@ -1,16 +1,15 @@
 "use strict";
 
-let WritableStream = require("./writable_stream");
-let render = require("../dist/bundle");
 let express = require("express");
+let Renderer = require("complate-express");
+let path = require("path");
 
 let app = express();
+let renderer = new Renderer(path.resolve(__dirname, "../dist/bundle.js"));
 
 app.get("/", (req, res) => {
 	res.status(200);
-
-	render(new WritableStream(res), "site-index", { title: "Hello World" });
-	res.end();
+	renderer.render(res, "site-index", { title: "Hello World" });
 });
 
 let server = app.listen(3000, () => {
