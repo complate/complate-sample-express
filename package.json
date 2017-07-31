@@ -8,7 +8,8 @@
 		"compile": "faucet --no-fingerprint --compact"
 	},
 	"dependencies": {
-		"complate-express": "^0.8.0",
+		"complate-express": "^0.9.0",
+		"eslint-config-fnd-jsx": "^1.0.1",
 		"express": "^4.15.3"
 	},
 	"devDependencies": {
