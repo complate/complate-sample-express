@@ -2,7 +2,7 @@
 	"scripts": {
 		"start": "npm-run-all --parallel server-watch compile-watch",
 		"test": "eslint --cache --ext .js --ext .jsx *.js src views && echo ✓",
-		"server-watch": "nodemon -w src -w dist/bundle.js -x 'npm run server'",
+		"server-watch": "nodemon -I -w src -w dist/bundle.js -x 'npm run server'",
 		"server": "node src",
 		"compile-watch": "npm run compile -- --watch",
 		"compile": "faucet --no-fingerprint --compact"
