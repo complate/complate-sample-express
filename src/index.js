@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
 
 let server = app.listen(3000, () => {
 	let addr = server.address();
-	// eslint-disable-next-line no-console
-	console.log(`→ http://${addr.address}:${addr.port}`);
+	let { address, port } = addr;
+	if(address === "::") {
+		address = "localhost";
+	}
+	console.log(`→ http://${address}:${port}`); // eslint-disable-line no-console
 });
