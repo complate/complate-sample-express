@@ -9,7 +9,7 @@ app.use(complate(path.resolve(__dirname, "../dist/bundle.js")));
 
 app.get("/", (req, res) => {
 	res.status(200);
-	res.complate("site-index", { title: "Hello World" });
+	res.complate("SiteIndex", { title: "Hello World" }, false);
 });
 
 let server = app.listen(3000, () => {
