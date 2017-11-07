@@ -8,7 +8,7 @@
 		"compile": "faucet --no-fingerprint --compact"
 	},
 	"dependencies": {
-		"complate-express": "^0.13.0",
+		"complate-express": "^0.14.0",
 		"express": "^4.16.2"
 	},
 	"devDependencies": {

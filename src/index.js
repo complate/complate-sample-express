@@ -12,8 +12,7 @@ app.use(complate(path.resolve(__dirname, "../dist/bundle.js")));
 
 app.get("/", (req, res) => {
 	res.status(200);
-	res.set("Content-Type", "text/html");
-	res.complate("SiteIndex", { title: "Hello World" }, false);
+	res.complate("SiteIndex", { title: "Hello World" });
 });
 
 let server = app.listen(PORT, HOST, _ => {
