@@ -11,7 +11,13 @@ let app = express();
 app.use(complate(path.resolve(__dirname, "../dist/bundle.js")));
 
 app.get("/", (req, res) => {
-	res.complate("SiteIndex", { title: "Hello World" });
+	res.complate("SiteIndex", { title: "Hello World" }, {
+		fragment: !!req.query.fragment
+	});
+});
+
+app.get("/bootstrap", (req, res) => {
+	res.complate("BootstrapSample", { title: "Boostrap sample" });
 });
 
 let server = app.listen(PORT, HOST, _ => {

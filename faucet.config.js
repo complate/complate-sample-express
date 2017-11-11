@@ -1,7 +1,7 @@
 let config = {
 	manifest: false,
 	bundles: [{
-		entryPoint: "./views/index.jsx",
+		entryPoint: "./views/index.js",
 		target: "./dist/bundle.js",
 		format: "cjs",
 		transpiler: {
