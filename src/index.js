@@ -11,7 +11,6 @@ let app = express();
 app.use(complate(path.resolve(__dirname, "../dist/bundle.js")));
 
 app.get("/", (req, res) => {
-	res.status(200);
 	res.complate("SiteIndex", { title: "Hello World" });
 });
 

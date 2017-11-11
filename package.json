@@ -8,12 +8,12 @@
 		"compile": "faucet --no-fingerprint --compact"
 	},
 	"dependencies": {
-		"complate-express": "^0.14.0",
+		"complate-express": "^0.15.0",
 		"express": "^4.16.2"
 	},
 	"devDependencies": {
 		"eslint-config-fnd-jsx": "^1.1.0",
 		"nodemon": "^1.12.1",
-		"npm-run-all": "^4.1.1"
+		"npm-run-all": "^4.1.2"
 	}
 }
