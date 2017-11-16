@@ -3,9 +3,7 @@ import Renderer from "complate-stream";
 
 let renderer = new Renderer("<!DOCTYPE html>");
 
-Object.values(views).forEach(view => {
-	renderer.registerView(view);
-});
+Object.values(views).forEach(renderer.registerView);
 
 export default (view, params, stream, fragment, callback) => {
 	return renderer.renderView(view, params, stream, { fragment }, callback);
