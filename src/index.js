@@ -8,7 +8,7 @@ const HOST = "localhost";
 const PORT = 3000;
 
 let app = express();
-app.use(complate(path.resolve(__dirname, "../dist/bundle.js")));
+app.use(complate(path.resolve(__dirname, "../dist/views.js")));
 
 app.get("/", (req, res) => {
 	res.complate("SiteIndex", { title: "Hello World" }, {

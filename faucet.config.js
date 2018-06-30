@@ -1,16 +1,10 @@
-let config = {
-	manifest: false,
-	bundles: [{
-		entryPoint: "./views/index.js",
-		target: "./dist/bundle.js",
-		format: "cjs",
-		transpiler: {
-			features: ["es2015", "jsx"],
-			jsx: { pragma: "createElement" }
-		}
-	}]
-};
+"use strict";
 
 module.exports = {
-	js: config
+	js: [{
+		source: "./views/index.js",
+		target: "./dist/views.js",
+		format: "commonjs",
+		jsx: { pragma: "createElement" }
+	}]
 };
