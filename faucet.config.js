@@ -4,7 +4,7 @@ module.exports = {
 	js: [{
 		source: "./views/index.js",
 		target: "./dist/views.js",
-		format: "commonjs",
+		format: "CommonJS",
 		jsx: { pragma: "createElement" }
 	}]
 };
