@@ -10,5 +10,11 @@ export function SiteIndex({ title, _layout }) {
 		<h1>{title}</h1>
 
 		{content}
+
+		<h2>Also available:</h2>
+		<ul>
+			<li><a href="/?fragment=yes">fragment-only</a></li>
+			<li><a href="/bootstrap">bootstrap-demo</a></li>
+		</ul>
 	</DefaultLayout>;
 }
